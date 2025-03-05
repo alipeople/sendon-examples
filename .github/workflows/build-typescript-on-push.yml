@@ -5,6 +5,7 @@ on:
     paths:
       - 'typescript/**'
       - .github/workflows/build-typescript-on-push.yml
+  workflow_dispatch:
 
 jobs:
   build:

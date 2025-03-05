@@ -5,6 +5,7 @@ on:
     paths:
       - 'java/**'
       - .github/workflows/build-java-on-push.yml
+  workflow_dispatch:
 
 jobs:
   build:
