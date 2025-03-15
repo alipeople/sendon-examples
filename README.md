@@ -9,17 +9,9 @@
 
 ## 예제
 
-현재 다음 언어 SDK를 사용한 예제가 포함되어 있습니다.
+현재 다음 언어 SDK를 사용한 예제가 포함되어 있습니다. 사용법에 대한 자세한 내용은 다음을 참조하세요:
 
-```bash
-.
-├── java
-└── typescript
-```
-
-사용법에 대한 자세한 내용은 다음을 참조하세요:
-
-- [Java](java/README.md)
+- [Java](java/README.md) (준비중)
 - [Typescript](typescript/README.md)
 
 ## 질문과 답변
