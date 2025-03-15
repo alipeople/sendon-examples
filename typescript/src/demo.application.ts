@@ -38,14 +38,14 @@ import { GetHistory } from './payment/get.history'
 
 const scenarios: BaseScenario[] = [
   new SmsDivider(),
-  new SendLongMessageNow(),
-  new SendLongMessageSchedule(),
-  new CancelLongMessage(),
-  new QueryLongMessage(),
   new SendShortMessageNow(),
   new SendShortMessageSchedule(),
   new CancelShortMessage(),
   new QueryShortMessage(),
+  new SendLongMessageNow(),
+  new SendLongMessageSchedule(),
+  new CancelLongMessage(),
+  new QueryLongMessage(),
   new UploadLongMessageImage(),
 
   // [kakao]

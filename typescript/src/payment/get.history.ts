@@ -13,7 +13,7 @@ export class GetHistory extends BaseScenario {
         page: 1,
         limit: 10,
         startDate: new Date('2025-01-01 00:00:00'),
-        endDate: new Date('2025-01-31 00:00:00'),
+        endDate: new Date('2099-04-31 00:00:00'),
       })
       console.log(`응답: ${JSON.stringify(paymentHistories, null, 2)}`)
 

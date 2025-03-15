@@ -2,23 +2,24 @@
 
 ## 사전 준비 사항
 
-- **Node.js**: >= v20  
+- **Node.js**: >= v20
 - **Yarn**: >= 1.22
 - **환경 변수 파일 (.env)**: API 키와 같은 중요한 설정을 포함하는 `.env` 파일을 준비합니다. 예시:
 
   ```plaintext
   USER_ID=YOUR_ID
-  USER_APIKEY=YOUR_APIKEY
-  SMS_MOBILE_TO=YOUR_TO
-  SMS_MOBILE_FROM=YOUR_FROM
-  KKO_MOBILE_TO=YOUR_TO
-  KKO_TEMPLATE_ID=YOUR_TEMPLATE_ID
-  KKO_CHANNEL_ID=YOUR_CHANNEL_ID
-  KKO_TOKEN_YOU_RECEIVED=YOUR_TOKEN
-  KKO_SEND_PROFILE_ID=YOUR_SEND_PROFILE_ID
-  KKO_CHANNEL_PHONE_NUMBER=YOUR_KAKAO_PHONE_NUMBER
+  USER_APIKEY="YOUR_APIKEY"
+  SMS_MOBILE_TO="YOUR_TO"
+  SMS_MOBILE_FROM="YOUR_FROM"
+
+  KKO_MOBILE_TO="YOUR_TO"
+  KKO_TEMPLATE_ID="YOUR_TEMPLATE_ID"
+  KKO_CHANNEL_ID="YOUR_CHANNEL_ID"
+  KKO_TOKEN_YOU_RECEIVED="YOUR_TOKEN"
+  KKO_SEND_PROFILE_ID="YOUR_SEND_PROFILE_ID"
+  KKO_CHANNEL_PHONE_NUMBER="YOUR_KAKAO_PHONE_NUMBER"
   ```
-  
+
 ## 빌드 방법
 
 ```bash
@@ -32,14 +33,14 @@
 ❯ node dist/demo.application.js
 
 =========== SMS ===========
-1. [LMS] 즉시문자 발송 (SendLongMessageNow)
-2. [LMS] 예약문자 발송 (SendLongMessageSchedule)
-3. [LMS] 예약문자 취소 (CancelLongMessage)
-4. [LMS] 발송문자 조회 (QueryLongMessage)
-5. [SMS] 즉시문자 발송 (SendShortMessageNow)
-6. [SMS] 예약문자 발송 (SendShortMessageSchedule)
-7. [SMS] 예약문자 취소 (CancelShortMessage)
-8. [SMS] 발송문자 조회 (QueryShortMessage)
+1. [SMS] 즉시문자 발송 (SendShortMessageNow)
+2. [SMS] 예약문자 발송 (SendShortMessageSchedule)
+3. [SMS] 예약문자 취소 (CancelShortMessage)
+4. [SMS] 발송문자 조회 (QueryShortMessage)
+5. [LMS] 즉시문자 발송 (SendLongMessageNow)
+6. [LMS] 예약문자 발송 (SendLongMessageSchedule)
+7. [LMS] 예약문자 취소 (CancelLongMessage)
+8. [LMS] 발송문자 조회 (QueryLongMessage)
 9. [MMS] 이미지 업로드, 발송 (UploadLongMessageImage)
 
 =========== Kakao ===========
