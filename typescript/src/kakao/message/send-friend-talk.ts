@@ -10,14 +10,15 @@ export class SendFriendTalk extends BaseScenario {
   description = '[카카오] 친구톡 발송'
 
   async execute() {
-    const result1: SdoKakaoSendFriendTalkResponse = await this.sendon.kakao.sendFriendTalk(KKO_SEND_PROFILE_ID, {
-      recipients: [KKO_MOBILE_TO],
+    const result1: SdoKakaoSendFriendTalkResponse = await this.sendon.kakao.sendFriendTalk({
+      sendProfileId: KKO_SEND_PROFILE_ID,
+      to: [KKO_MOBILE_TO.to],
       message: outdent`
         안녕하세요. #{이름}님.
         SDK를 이용한 친구톡 발송 테스트입니다.
       `,
       isAd: false,
-      messageType: 'FRIEND_TALK',
+      messageType: 'FT',
       buttons: [
         {
           type: 'WL',
