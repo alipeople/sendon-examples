@@ -25,16 +25,18 @@ export class CancelLongMessage extends BaseScenario {
 
     if (result1.code === HttpStatusCode.Ok) {
       console.log(`성공 응답: ${JSON.stringify(result1, null, 2)}`)
+      await this.sleep(5 * 1000)
+
+      const result2: SdoSmsCancelResponse = await this.sendon.sms.cancel(result1.data.groupId)
+
+      if (result1.code === HttpStatusCode.Ok) {
+        console.log(`성공 응답: ${JSON.stringify(result1, null, 2)}`)
+      } else {
+        console.log(`실패 응답: ${JSON.stringify(result1, null, 2)}`)
+      }
     } else {
       console.log(`실패 응답: ${JSON.stringify(result1, null, 2)}`)
     }
 
-    const result2: SdoSmsCancelResponse = await this.sendon.sms.cancel(result1.data.groupId)
-
-    if (result1.code === HttpStatusCode.Ok) {
-      console.log(`성공 응답: ${JSON.stringify(result1, null, 2)}`)
-    } else {
-      console.log(`실패 응답: ${JSON.stringify(result1, null, 2)}`)
-    }
   }
 }

@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 /**
- * Please use configurations from .env 
+ * Please use configurations from .env
  */
 export const USER_ID = process.env.USER_ID || "YOUR_ID"
 export const USER_APIKEY = process.env.USER_APIKEY || "YOUR_APIKEY"
@@ -38,8 +38,10 @@ export abstract class BaseScenario {
     return false
   }
 
-  sleep(ms: number): Promise<void> {
-    return new Promise(resolve => {
+  sleep(ms: number, signal?: AbortSignal): Promise<void> {
+    return new Promise((resolve, reject) => {
+      if (signal?.aborted) return reject(new Error('Sleep aborted'));
+
       let seconds = 0;
       let dots = '';
       const interval = setInterval(() => {
@@ -48,11 +50,19 @@ export abstract class BaseScenario {
         process.stdout.write(`\r[${seconds}]${dots}`);
       }, 1000);
 
-      setTimeout(() => {
+      const timeout = setTimeout(() => {
         clearInterval(interval);
         process.stdout.write('\n');
         resolve();
       }, ms);
+
+      if (signal) {
+        signal.addEventListener("abort", () => {
+          clearTimeout(timeout);
+          clearInterval(interval);
+          reject(new Error());
+        });
+      }
     });
   }
 }

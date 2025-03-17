@@ -15,17 +15,16 @@ export class AddRemoveBlocklist extends BaseScenario {
 
     if (result1.code === HttpStatusCode.Ok) {
       console.log(`성공 응답: ${JSON.stringify(result1, null, 2)}`)
+      const result2: DeleteBlocklistResponseDto = await this.sendon.contacts.deleteBlocklist(result1.data.id)
+
+      if (result2.code === HttpStatusCode.Ok) {
+        console.log(`성공 응답: ${JSON.stringify(result2, null, 2)}`)
+      } else {
+        console.log(`실패 응답: ${JSON.stringify(result2, null, 2)}`)
+      }
+
     } else {
       console.log(`실패 응답: ${JSON.stringify(result1, null, 2)}`)
     }
-
-    const result2: DeleteBlocklistResponseDto = await this.sendon.contacts.deleteBlocklist(result1.data.id)
-
-    if (result2.code === HttpStatusCode.Ok) {
-      console.log(`성공 응답: ${JSON.stringify(result2, null, 2)}`)
-    } else {
-      console.log(`실패 응답: ${JSON.stringify(result2, null, 2)}`)
-    }
-
   }
 }

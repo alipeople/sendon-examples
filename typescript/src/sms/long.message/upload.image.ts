@@ -22,31 +22,34 @@ export class UploadLongMessageImage extends BaseScenario {
     // 이미지 업로드
     const files: Array<File> = [imageFile]
     console.log('이미지 업로드 중...')
-    const uploadPromise = this.sendon.sms.uploadImages(files)
-    const sleepPromise = this.sleep(20000)
-    const result1 = await Promise.race([uploadPromise, sleepPromise])
-    if (!result1) throw new Error('Image upload timed out')
 
-    if (result1.code === HttpStatusCode.Ok) {
+    const uploadPromise = this.sendon.sms.uploadImages(files)
+    const abortController = new AbortController()
+    const sleepPromise = this.sleep(20000, abortController.signal)
+    const result1 = await Promise.race([uploadPromise, sleepPromise])
+    abortController.abort()
+
+    if (result1?.code === HttpStatusCode.Ok) {
       console.log(`성공 응답: ${JSON.stringify(result1, null, 2)}`)
+
+      // 업로드된 이미지와 함께 메시지 발송
+      const result2: SdoSmsSendMessageResponse = await this.sendon.sms.send({
+        type: SmsMessageType.MMS,
+        from: SMS_MOBILE_FROM,
+        to: SMS_MOBILE_TO,
+        title: '테스트 문자',
+        message: `안녕하세요. Sendon SDK Typescript 이용한 문자 발송입니다.(${Math.random().toString(36).substring(2, 5)})`,
+        images: [result1.data.images[0].id],
+      })
+
+      if (result2.code === HttpStatusCode.Ok) {
+        console.log(`성공 응답: ${JSON.stringify(result2, null, 2)}`)
+      } else {
+        console.log(`실패 응답: ${JSON.stringify(result2, null, 2)}`)
+      }
+
     } else {
       console.log(`실패 응답: ${JSON.stringify(result1, null, 2)}`)
-    }
-
-    // 업로드된 이미지와 함께 메시지 발송
-    const result2: SdoSmsSendMessageResponse = await this.sendon.sms.send({
-      type: SmsMessageType.MMS,
-      from: SMS_MOBILE_FROM,
-      to: SMS_MOBILE_TO,
-      title: '테스트 문자',
-      message: `안녕하세요. Sendon SDK Typescript 이용한 문자 발송입니다.(${Math.random().toString(36).substring(2, 5)})`,
-      images: [result1.data.images[0].id],
-    })
-
-    if (result2.code === HttpStatusCode.Ok) {
-      console.log(`성공 응답: ${JSON.stringify(result2, null, 2)}`)
-    } else {
-      console.log(`실패 응답: ${JSON.stringify(result2, null, 2)}`)
     }
   }
 }
