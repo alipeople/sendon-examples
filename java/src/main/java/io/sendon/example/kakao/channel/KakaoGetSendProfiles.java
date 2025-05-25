@@ -14,6 +14,6 @@ public class KakaoGetSendProfiles extends BaseScenario {
 
   @Override
   public String getDescription() {
-    return "[카카오] 발신 프로필 조회";
+    return "[카카오] 발신프로필 리스트 조회";
   }
 }

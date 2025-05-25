@@ -1,6 +1,5 @@
 /* eslint-disable no-console */
-import { SdoError } from '@alipeople/sendon-sdk-typescript'
-import { SdoKakaoSendFriendTalkResponse } from '@alipeople/sendon-sdk-typescript/dist/wrapper/kakao/kakao.wrapper'
+import { SdoError, SdoKakaoSendFriendTalkResponse, SendFriendTalkRequestSchemaMessageType } from '@alipeople/sendon-sdk-typescript'
 import { outdent } from 'outdent'
 
 import { BaseScenario, KKO_MOBILE_TO, KKO_SEND_PROFILE_ID } from '../../base.scenario'

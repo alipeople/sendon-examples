@@ -3,6 +3,7 @@ package io.sendon.example.payment;
 import io.sendon.Log;
 import io.sendon.example.BaseScenario;
 import io.sendon.payment.response.GetPaymentHistories;
+import io.sendon.payment.response.GetPaymentHistory;
 
 public class PaymentGetHistories extends BaseScenario {
 
@@ -11,8 +12,8 @@ public class PaymentGetHistories extends BaseScenario {
     GetPaymentHistories getPaymentHistories = sendon.payment.getPaymentHistories(1, 10, "2021-01-01", "2025-12-31");
     Log.d("GetPaymentHistories: " + gson.toJson(getPaymentHistories));
 
-    // GetPaymentHistory getPaymentHistory = sendon.payment.getPaymentHistory(getPaymentHistories.data.histories.get(0).id);
-    // Log.d("GetPaymentHistory: " + gson.toJson(getPaymentHistory));
+    GetPaymentHistory getPaymentHistory = sendon.payment.getPaymentHistory(getPaymentHistories.data.histories.get(0).id);
+    Log.d("GetPaymentHistory: " + gson.toJson(getPaymentHistory));
   }
 
   @Override

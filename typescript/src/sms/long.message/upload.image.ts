@@ -1,8 +1,5 @@
 /* eslint-disable no-console */
-import { SdoError, SmsMessageType } from '@alipeople/sendon-sdk-typescript'
-import {
-  SdoSmsSendMessageResponse
-} from '@alipeople/sendon-sdk-typescript/dist/wrapper/sms/sms.wrapper'
+import { SdoError, SdoSmsSendMessageResponse, SmsMessageType } from '@alipeople/sendon-sdk-typescript'
 import * as fs from 'fs'
 import * as path from 'path'
 

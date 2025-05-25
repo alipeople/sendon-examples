@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@alipeople/sendon-sdk-typescript@^1.0.1-beta.57":
-  version "1.0.1-beta.57"
-  resolved "https://registry.yarnpkg.com/@alipeople/sendon-sdk-typescript/-/sendon-sdk-typescript-1.0.1-beta.57.tgz#5c56affad853dada9322d2f3707bad7bbd484b60"
-  integrity sha512-KDT8Y6jd8hPdwLMHPjjybbPGCH3tFmxvEVF7XZ6FY33quNHw5KC/Ku4Z0RaOn0Ug4kBmJG98/o/oENAvoPnJnw==
+"@alipeople/sendon-sdk-typescript@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@alipeople/sendon-sdk-typescript/-/sendon-sdk-typescript-1.0.2.tgz#2ec26c6381144f863224f485bce1a281e681cb68"
+  integrity sha512-gSf96Md+nk7unaKG+BLoYjsQQCMw8Mfvj4Rx3vosPGBpsZWmqspYQgRIFBM0nAFOw/ogEilDMpbka41sqGKseQ==
   dependencies:
     axios "^1.6.1"
 
@@ -437,6 +437,7 @@ signal-exit@^4.0.1:
   integrity sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw==
 
 "string-width-cjs@npm:string-width@^4.2.0", string-width@^4.1.0:
+  name string-width-cjs
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
@@ -455,6 +456,7 @@ string-width@^5.0.1, string-width@^5.1.2:
     strip-ansi "^7.0.1"
 
 "strip-ansi-cjs@npm:strip-ansi@^6.0.1", strip-ansi@^6.0.0, strip-ansi@^6.0.1:
+  name strip-ansi-cjs
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-6.0.1.tgz#9e26c63d30f53443e9489495b2105d37b67a85d9"
   integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==

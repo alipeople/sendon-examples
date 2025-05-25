@@ -1,6 +1,5 @@
 /* eslint-disable no-console */
-import { SdoError } from "@alipeople/sendon-sdk-typescript";
-import { SdoKakaoSendAlimTalkResponse } from "@alipeople/sendon-sdk-typescript/dist/wrapper/kakao/kakao.wrapper";
+import { SdoError, SdoKakaoSendAlimTalkResponse } from '@alipeople/sendon-sdk-typescript'
 
 import {
   BaseScenario,
