@@ -73,4 +73,4 @@ Select a command:
 ```
 
 선택 가능한 메뉴 옆에 클래스명이 표기되어 있습니다. 선택된 기능의 코드 구현부가 궁금하면 클래스 구현을 참조하면 됩니다.<br>
-Sendon SDK나 API에 대해 궁금한 점이 있으시면 언제든지 [저희에게](dev@alipeople.kr) 문의해 주세요.
+Sendon SDK나 API에 대해 궁금한 점이 있으시면 언제든지 [저희에게](mailto:dev@alipeople.kr) 문의해 주세요.
