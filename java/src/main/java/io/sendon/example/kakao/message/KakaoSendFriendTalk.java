@@ -7,6 +7,9 @@ import io.sendon.example.BaseScenario;
 import io.sendon.kakao.request.FriendtalkBuilder;
 import io.sendon.kakao.response.SendFriendtalk;
 
+/**
+ * 친구톡 발송 (deprecated)
+ */
 public class KakaoSendFriendTalk extends BaseScenario {
 
     @Override

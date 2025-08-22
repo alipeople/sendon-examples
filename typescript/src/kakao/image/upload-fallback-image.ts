@@ -1,9 +1,8 @@
 /* eslint-disable no-console */
-import { SdoError } from '@alipeople/sendon-sdk-typescript'
 import * as fs from 'fs'
 
-import { BaseScenario } from '../../base.scenario'
 import { HttpStatusCode } from 'axios'
+import { BaseScenario } from '../../base.scenario'
 
 export class UploadFallbackImage extends BaseScenario {
   description = '[카카오] 대체문자 이미지 업로드'

@@ -12,10 +12,7 @@ import io.sendon.example.kakao.channel.KakaoGetSendProfiles;
 import io.sendon.example.kakao.channel.KakaoRegisterProfile;
 import io.sendon.example.kakao.channel.KakaoRequestVerification;
 import io.sendon.example.kakao.image.KakaoUploadFallbackImage;
-import io.sendon.example.kakao.image.KakaoUploadFriendImage;
-import io.sendon.example.kakao.image.KakaoUploadFriendWideImage;
 import io.sendon.example.kakao.message.KakaoSendAlimTalk;
-import io.sendon.example.kakao.message.KakaoSendFriendTalk;
 import io.sendon.example.kakao.template.KakaoCreateTemplate;
 import io.sendon.example.kakao.template.KakaoGetTemplate;
 import io.sendon.example.kakao.template.KakaoGetTemplateList;
@@ -60,9 +57,6 @@ public class DemoApplication {
             new KakaoGetTemplate(),
             new KakaoCreateTemplate(),
             new KakaoSendAlimTalk(),
-            new KakaoSendFriendTalk(),
-            new KakaoUploadFriendImage(),
-            new KakaoUploadFriendWideImage(),
             new KakaoUploadFallbackImage(),
             new ZSenderDivider(),
             new SenderGetNumbers(),

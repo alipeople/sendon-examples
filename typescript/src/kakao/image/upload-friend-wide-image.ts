@@ -1,11 +1,13 @@
 /* eslint-disable no-console */
 
-import { SdoError } from '@alipeople/sendon-sdk-typescript'
 import * as fs from 'fs'
 
-import { BaseScenario } from '../../base.scenario'
 import { HttpStatusCode } from 'axios'
+import { BaseScenario } from '../../base.scenario'
 
+/**
+ * 친구톡 와이드 이미지 업로드 (deprecated)
+ */
 export class UploadFriendWideImage extends BaseScenario {
   description = '[카카오] 친구톡 와이드 이미지 업로드'
 

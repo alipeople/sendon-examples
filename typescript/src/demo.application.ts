@@ -8,15 +8,15 @@ import { GetBlocklist } from './contacts/get.blocklist'
 import { RegisterChannel } from './kakao/channel/register-channel'
 import { RequestChannelVerification } from './kakao/channel/request-verification'
 
+import { GetSendProfiles } from './kakao/channel/get-send-profiles'
 import { UploadFallbackImage } from './kakao/image/upload-fallback-image'
-import { UploadFriendImage } from './kakao/image/upload-friend-image'
-import { UploadFriendWideImage } from './kakao/image/upload-friend-wide-image'
 import { KakaoDivider } from './kakao/kakao.divider'
 import { SendAlimTalk } from './kakao/message/send-alim-talk'
-import { SendFriendTalk } from './kakao/message/send-friend-talk'
 import { CreateTemplate } from './kakao/template/create-template'
 import { GetTemplate } from './kakao/template/get-template'
 import { GetTemplateList } from './kakao/template/get-template-list'
+import { GetHistory } from './payment/get.history'
+import { PaymentDivider } from './payment/payment.divider'
 import { GetCost } from './point/get.cost'
 import { GetPoint } from './point/get.point'
 import { PointDivider } from './point/point.divider'
@@ -32,9 +32,6 @@ import { QueryShortMessage } from './sms/short.message/query.message'
 import { SendShortMessageNow } from './sms/short.message/send.message.now'
 import { SendShortMessageSchedule } from './sms/short.message/send.message.schedule'
 import { SmsDivider } from './sms/sms.divider'
-import { GetSendProfiles } from './kakao/channel/get-send-profiles'
-import { PaymentDivider } from './payment/payment.divider'
-import { GetHistory } from './payment/get.history'
 
 const scenarios: BaseScenario[] = [
   new SmsDivider(),
@@ -60,10 +57,7 @@ const scenarios: BaseScenario[] = [
   new CreateTemplate(),
   // [kakao] send-message
   new SendAlimTalk(),
-  new SendFriendTalk(),
   // [kakao] image
-  new UploadFriendImage(),
-  new UploadFriendWideImage(),
   new UploadFallbackImage(),
 
   new SenderDivider(),

@@ -5,6 +5,9 @@ import { outdent } from 'outdent'
 import { BaseScenario, KKO_MOBILE_TO, KKO_SEND_PROFILE_ID } from '../../base.scenario'
 import { HttpStatusCode } from 'axios'
 
+/**
+ * 친구톡 발송 (deprecated)
+ */
 export class SendFriendTalk extends BaseScenario {
   description = '[카카오] 친구톡 발송'
 

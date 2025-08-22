@@ -51,25 +51,22 @@
 14. [카카오] 템플릿 조회 (GetTemplate)
 15. [카카오] 템플릿 생성 (CreateTemplate)
 16. [카카오] 알림톡 발송 (SendAlimTalk)
-17. [카카오] 친구톡 발송 (SendFriendTalk)
-18. [카카오] 친구톡 이미지 업로드 (UploadFriendImage)
-19. [카카오] 친구톡 와이드 이미지 업로드 (UploadFriendWideImage)
-20. [카카오] 대체문자 이미지 업로드 (UploadFallbackImage)
+17. [카카오] 대체문자 이미지 업로드 (UploadFallbackImage)
 
 =========== Sender ===========
-21. [발신번호] 발신번호 목록조회 (GetNumbers)
+18. [발신번호] 발신번호 목록조회 (GetNumbers)
 
 =========== Point ===========
-22. [포인트] 단가 조회 (GetCost)
-23. [포인트] 포인트 조회 (GetPoint)
+19. [포인트] 단가 조회 (GetCost)
+20. [포인트] 포인트 조회 (GetPoint)
 
 =========== Contacts ===========
-24. [주소록] 수신거부 추가삭제 (AddRemoveBlocklist)
-25. [주소록] 차단목록 조회 (GetBlocklist)
+21. [주소록] 수신거부 추가삭제 (AddRemoveBlocklist)
+22. [주소록] 차단목록 조회 (GetBlocklist)
 
 =========== Payment ===========
-26. [결제] 결제 내역 조회 (GetHistory)
- 0. Exit
+23. [결제] 결제 내역 조회 (GetHistory)
+0. Exit
 Select a command:
 ```
 

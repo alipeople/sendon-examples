@@ -6,6 +6,9 @@ import io.sendon.Log;
 import io.sendon.example.BaseScenario;
 import io.sendon.kakao.response.UploadFriendtalkImage;
 
+/**
+ * 친구톡 이미지 업로드 (deprecated)
+ */
 public class KakaoUploadFriendImage extends BaseScenario{
 
     @Override
