@@ -9,7 +9,7 @@ export class UploadFallbackImage extends BaseScenario {
 
   async execute() {
     const buffer = fs.readFileSync('./src/kakao/image/images/sample.jpg')
-    const file = new File([buffer], 'sample.jpg', { type: 'image/jpeg' })
+    const file = new File([new Uint8Array(buffer)], 'sample.jpg', { type: 'image/jpeg' })
 
     const result1 = await this.sendon.kakao.uploadFallbackImage([file])
 

@@ -13,7 +13,7 @@ export class UploadLongMessageImage extends BaseScenario {
     // 이미지 준비
     const imagePath = path.resolve(__dirname, './aligo.png')
     const imageBuffer = fs.readFileSync(imagePath)
-    const imageBlob = new Blob([imageBuffer], { type: 'image/png' })
+    const imageBlob = new Blob([new Uint8Array(imageBuffer)], { type: 'image/png' })
     const imageFile = new File([imageBlob], 'aligo.png', { type: 'image/png' })
 
     // 이미지 업로드

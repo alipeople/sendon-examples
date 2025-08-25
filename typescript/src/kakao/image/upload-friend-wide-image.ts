@@ -16,7 +16,7 @@ export class UploadFriendWideImage extends BaseScenario {
     const fileName = 'sample-wide-image.jpeg'
 
     const imageFile = fs.readFileSync(filePath)
-    const file = new File([imageFile], fileName, { type: 'image/jpeg' })
+    const file = new File([new Uint8Array(imageFile)], fileName, { type: 'image/jpeg' })
     const result1 = await this.sendon.kakao.uploadFriendTalkWideImage(file)
 
     if (result1.code === HttpStatusCode.Ok) {

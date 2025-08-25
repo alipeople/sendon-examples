@@ -15,7 +15,7 @@ export class UploadFriendImage extends BaseScenario {
     const fileName = 'sample-image.jpeg'
 
     const imageFile = fs.readFileSync(filePath)
-    const file = new File([imageFile], fileName, { type: 'image/jpeg' })
+    const file = new File([new Uint8Array(imageFile)], fileName, { type: 'image/jpeg' })
     const result1 = await this.sendon.kakao.uploadFriendTalkImage(file)
 
     if (result1.code === HttpStatusCode.Ok) {
