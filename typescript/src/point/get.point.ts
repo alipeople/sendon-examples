@@ -1,8 +1,8 @@
 /* eslint-disable no-console */
-import { PointsListResponseDto, SdoError } from '@alipeople/sendon-sdk-typescript'
+import { PointsListResponseDto } from '@alipeople/sendon-sdk-typescript'
 
-import { BaseScenario } from '../base.scenario'
 import { HttpStatusCode } from 'axios'
+import { BaseScenario } from '../base.scenario'
 
 export class GetPoint extends BaseScenario {
   description = '[포인트] 포인트 조회'

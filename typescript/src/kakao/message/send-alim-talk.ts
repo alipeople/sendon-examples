@@ -1,13 +1,13 @@
 /* eslint-disable no-console */
-import { SdoError, SdoKakaoSendAlimTalkResponse } from '@alipeople/sendon-sdk-typescript'
+import { SdoKakaoSendAlimTalkResponse } from '@alipeople/sendon-sdk-typescript';
 
-import {
-  BaseScenario,
-  KKO_MOBILE_TO,
-  KKO_SEND_PROFILE_ID,
-  KKO_TEMPLATE_ID,
-} from "../../base.scenario";
 import { HttpStatusCode } from "axios";
+import {
+    BaseScenario,
+    KKO_MOBILE_TO,
+    KKO_SEND_PROFILE_ID,
+    KKO_TEMPLATE_ID,
+} from "../../base.scenario";
 
 export class SendAlimTalk extends BaseScenario {
   description = "[카카오] 알림톡 발송";

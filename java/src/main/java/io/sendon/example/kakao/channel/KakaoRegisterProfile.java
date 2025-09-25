@@ -11,7 +11,7 @@ public class KakaoRegisterProfile extends BaseScenario {
   public void execute() {
     RegisterProfile registerProfile = sendon.kakao.registerProfile(
       new Profile()
-          .setToken(KKO_TOKEN_YOU_RECEIVED)
+          .setToken("123456") // 카카오톡으로 받은 인증번호
           .setPhoneNumber(KKO_CHANNEL_PHONE_NUMBER)
           .setChannelId(KKO_CHANNEL_ID)
     );

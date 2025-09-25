@@ -1,8 +1,7 @@
 /* eslint-disable no-console */
-import { SdoError } from '@alipeople/sendon-sdk-typescript'
 
-import { BaseScenario, KKO_CHANNEL_ID, KKO_CHANNEL_PHONE_NUMBER } from '../../base.scenario'
 import { HttpStatusCode } from 'axios'
+import { BaseScenario, KKO_CHANNEL_ID, KKO_CHANNEL_PHONE_NUMBER } from '../../base.scenario'
 
 export class RequestChannelVerification extends BaseScenario {
   description = '[카카오] 채널 인증번호 요청'

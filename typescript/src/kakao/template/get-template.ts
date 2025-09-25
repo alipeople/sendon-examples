@@ -1,11 +1,10 @@
 /* eslint-disable no-console */
-import { SdoError } from '@alipeople/sendon-sdk-typescript'
 
-import { BaseScenario, KKO_SEND_PROFILE_ID, KKO_TEMPLATE_ID } from '../../base.scenario'
 import { HttpStatusCode } from 'axios'
+import { BaseScenario, KKO_SEND_PROFILE_ID, KKO_TEMPLATE_ID } from '../../base.scenario'
 
 export class GetTemplate extends BaseScenario {
-  description = '[카카오] 템플릿 조회'
+  description = '[카카오] 알림톡 템플릿 조회'
 
   async execute() {
     const result1 = await this.sendon.kakao.getTemplate(KKO_SEND_PROFILE_ID, KKO_TEMPLATE_ID)

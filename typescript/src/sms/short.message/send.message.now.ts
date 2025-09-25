@@ -1,8 +1,8 @@
 /* eslint-disable no-console */
-import { SdoError, SdoSmsSendMessageResponse, SmsMessageType } from '@alipeople/sendon-sdk-typescript'
+import { SdoSmsSendMessageResponse, SmsMessageType } from '@alipeople/sendon-sdk-typescript'
 
-import { BaseScenario, SMS_MOBILE_FROM, SMS_MOBILE_TO } from '../../base.scenario'
 import { HttpStatusCode } from 'axios'
+import { BaseScenario, SMS_MOBILE_FROM, SMS_MOBILE_TO } from '../../base.scenario'
 
 export class SendShortMessageNow extends BaseScenario {
   description = '[SMS] 즉시문자 발송'

@@ -11,13 +11,13 @@ public class SmsSendShortMessageNowScenario extends BaseScenario {
 
   @Override
   public void execute() {
-    SendSms sendSms2 = sendon.sms.sendSms(new SmsBuilder()
+    SendSms sendSms = sendon.sms.sendSms(new SmsBuilder()
         .setFrom(SMS_MOBILE_FROM)
         .setTo(Arrays.asList(SMS_MOBILE_TO))
         .setMessage("Hello, World!")
         .setIsAd(false)
     );
-    Log.d("응답: " + gson.toJson(sendSms2));
+    Log.d("응답: " + gson.toJson(sendSms));
   }
 
   @Override

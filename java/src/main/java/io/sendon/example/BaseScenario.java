@@ -19,6 +19,17 @@ public abstract class BaseScenario {
   protected String KKO_TOKEN_YOU_RECEIVED;
   protected String KKO_SEND_PROFILE_ID;
   protected String KKO_CHANNEL_PHONE_NUMBER;
+  protected String KKO_BRAND_MESSAGE_TEMPLATE_CODE;
+  protected String RCS_MOBILE_TO;
+  protected String RCS_MOBILE_FROM;
+  protected String RCS_CHATBOT_ID;
+  protected String RCS_MESSAGEBASE_ID;
+  protected String RCS_BRAND_ID;
+  protected String RCS_BRAND_KEY;
+  protected String RCS_AGENCY_ID;
+  protected String RCS_AGENCY_KEY;
+  protected String RCS_CLIENT_ID;
+  protected String RCS_CLIENT_SECRET;
 
   public abstract void execute() throws InterruptedException;
   public abstract String getDescription();
@@ -37,6 +48,17 @@ public abstract class BaseScenario {
     KKO_TOKEN_YOU_RECEIVED = dotenv.get("KKO_TOKEN_YOU_RECEIVED");
     KKO_SEND_PROFILE_ID = dotenv.get("KKO_SEND_PROFILE_ID");
     KKO_CHANNEL_PHONE_NUMBER = dotenv.get("KKO_CHANNEL_PHONE_NUMBER");
+    KKO_BRAND_MESSAGE_TEMPLATE_CODE = dotenv.get("KKO_BRAND_MESSAGE_TEMPLATE_CODE");
+    RCS_MOBILE_TO = dotenv.get("RCS_MOBILE_TO");
+    RCS_MOBILE_FROM = dotenv.get("RCS_MOBILE_FROM");
+    RCS_CHATBOT_ID = dotenv.get("RCS_CHATBOT_ID");
+    RCS_MESSAGEBASE_ID = dotenv.get("RCS_MESSAGEBASE_ID");
+    RCS_BRAND_ID = dotenv.get("RCS_BRAND_ID");
+    RCS_BRAND_KEY = dotenv.get("RCS_BRAND_KEY");
+    RCS_AGENCY_ID = dotenv.get("RCS_AGENCY_ID");
+    RCS_AGENCY_KEY = dotenv.get("RCS_AGENCY_KEY");
+    RCS_CLIENT_ID = dotenv.get("RCS_CLIENT_ID");
+    RCS_CLIENT_SECRET = dotenv.get("RCS_CLIENT_SECRET");
 
     sendon = Sendon.getInstance(USER_ID, USER_APIKEY, true);
 

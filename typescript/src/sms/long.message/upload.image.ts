@@ -1,10 +1,10 @@
 /* eslint-disable no-console */
-import { SdoError, SdoSmsSendMessageResponse, SmsMessageType } from '@alipeople/sendon-sdk-typescript'
+import { SdoSmsSendMessageResponse, SmsMessageType } from '@alipeople/sendon-sdk-typescript'
 import * as fs from 'fs'
 import * as path from 'path'
 
-import { BaseScenario, SMS_MOBILE_FROM, SMS_MOBILE_TO } from '../../base.scenario'
 import { HttpStatusCode } from 'axios'
+import { BaseScenario, SMS_MOBILE_FROM, SMS_MOBILE_TO } from '../../base.scenario'
 
 export class UploadLongMessageImage extends BaseScenario {
   description = '[MMS] 이미지 업로드, 발송'

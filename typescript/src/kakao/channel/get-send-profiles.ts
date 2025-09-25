@@ -1,8 +1,7 @@
 /* eslint-disable no-console */
-import { SdoError } from '@alipeople/sendon-sdk-typescript'
 
-import { BaseScenario } from '../../base.scenario'
 import { HttpStatusCode } from 'axios'
+import { BaseScenario } from '../../base.scenario'
 
 export class GetSendProfiles extends BaseScenario {
   description = '[카카오] 발신프로필 리스트 조회'

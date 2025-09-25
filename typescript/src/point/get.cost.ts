@@ -1,8 +1,8 @@
 /* eslint-disable no-console */
-import { CostGetResponseDto, SdoError } from '@alipeople/sendon-sdk-typescript'
+import { CostGetResponseDto } from '@alipeople/sendon-sdk-typescript'
 
-import { BaseScenario } from '../base.scenario'
 import { HttpStatusCode } from 'axios'
+import { BaseScenario } from '../base.scenario'
 
 export class GetCost extends BaseScenario {
   description = '[포인트] 단가 조회'

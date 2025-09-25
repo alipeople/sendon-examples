@@ -43,28 +43,45 @@
 9. [MMS] 이미지 업로드 및 발송 (SmsSendLongMessageWithUploadImageScenario)
 
 =========== Kakao ===========
-10. [카카오] 채널 인증번호 요청 (KakaoRequestVerification)
-11. [카카오] 채널 등록 (KakaoRegisterChannel)
-12. [카카오] 발신 프로필 조회 (KakaoGetSendProfiles)
-13. [카카오] 템플릿 목록 조회 (KakaoGetTemplateList)
-14. [카카오] 템플릿 조회 (KakaoGetTemplate)
-15. [카카오] 템플릿 생성 (KakaoCreateTemplate)
-16. [카카오] 알림톡 발송 (KakaoSendAlimTalk)
-17. [카카오] 대체문자 이미지 업로드 (KakaoUploadFallbackImage)
+10. [카카오] 브랜드메시지 텍스트 템플릿 생성 및 발송 (KakaoCreateBrandMessageTemplate)
+11. [카카오] 브랜드메시지 이미지 템플릿 생성 (KakaoCreateBrandMessageImageTemplate)
+12. [카카오] 브랜드메시지 와이드 템플릿 생성 (KakaoCreateBrandMessageWideTemplate)
+13. [카카오] 브랜드메시지 와이드 아이템리스트 템플릿 생성 (KakaoCreateBrandMessageWideItemListTemplate)
+14. [카카오] 브랜드메시지 캐러셀 템플릿 생성 (KakaoCreateBrandMessageCarouselTemplate)
+15. [카카오] 브랜드메시지 템플릿 목록 조회 (KakaoGetBrandMessageTemplates)
+16. [카카오] 브랜드메시지 템플릿 상세 조회 (KakaoGetBrandMessageTemplate)
+17. [카카오] 브랜드메시지 텍스트 템플릿 수정 (KakaoUpdateBrandMessageTemplate)
+18. [카카오] 브랜드메시지 템플릿 삭제 (KakaoDeleteBrandMessageTemplate)
+19. [카카오] 브랜드메시지 발송 (KakaoSendBrandMessage)
+20. [카카오] 브랜드메시지 이미지 업로드 (KakaoUploadBrandMessageImage)
+21. [카카오] 브랜드메시지 와이드 이미지 업로드 (KakaoUploadBrandMessageWideImage)
+22. [카카오] 채널 인증번호 요청 (KakaoRequestVerification)
+23. [카카오] 채널 등록 (KakaoRegisterProfile)
+24. [카카오] 발신프로필 리스트 조회 (KakaoGetSendProfiles)
+25. [카카오] 템플릿 목록 조회 (KakaoGetTemplateList)
+26. [카카오] 템플릿 조회 (KakaoGetTemplate)
+27. [카카오] 템플릿 생성 (KakaoCreateTemplate)
+28. [카카오] 알림톡 발송 (KakaoSendAlimTalk)
+29. [카카오] 대체문자 이미지 업로드 (KakaoUploadFallbackImage)
+
+=========== RCS ===========
+30. [RCS] 즉시 RCS 메시지 발송 (RcsSendMessageNowScenario)
+31. [RCS] 발송한 RCS 메시지 조회 (RcsQueryMessageScenario)
+32. [RCS] CSV 업로드용 Presigned URL 조회 (RcsQueryPresignedUrlScenario)
 
 =========== Sender ===========
-18. [발신번호] 발신번호 목록조회 (SenderGetNumbers)
+33. [발신번호] 발신번호 목록조회 (SenderGetNumbers)
 
 =========== Point ===========
-19. [포인트] 단가 조회 (PointGetCost)
-20. [포인트] 포인트 조회 (PointGetPoint)
+34. [포인트] 단가 조회 (PointGetCost)
+35. [포인트] 포인트 조회 (PointGetPoint)
 
 =========== Contacts ===========
-21. [주소록] 차단목록 조회 (ContactsGetBlocklist)
-22. [주소록] 수신거부 추가삭제 (ContactsAddRemoveBlocklist)
+36. [주소록] 차단목록 조회 (ContactsGetBlocklist)
+37. [주소록] 수신거부 추가삭제 (ContactsAddRemoveBlocklist)
 
 =========== Payment ===========
-23. [결제] 결제 내역 조회 (PaymentGetHistory)
+38. [결제] 결제 내역 조회 (PaymentGetHistories)
 0. Exit
 Select a command:
 ```
