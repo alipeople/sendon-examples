@@ -8,6 +8,18 @@ import io.sendon.example.contacts.ContactsAddRemoveBlocklist;
 import io.sendon.example.contacts.ContactsGetBlocklist;
 import io.sendon.example.contacts.ZContactsDivider;
 import io.sendon.example.kakao.ZKakaoDivider;
+import io.sendon.example.kakao.brandmessage.KakaoCreateBrandMessageCarouselTemplate;
+import io.sendon.example.kakao.brandmessage.KakaoCreateBrandMessageImageTemplate;
+import io.sendon.example.kakao.brandmessage.KakaoCreateBrandMessageTemplate;
+import io.sendon.example.kakao.brandmessage.KakaoCreateBrandMessageWideItemListTemplate;
+import io.sendon.example.kakao.brandmessage.KakaoCreateBrandMessageWideTemplate;
+import io.sendon.example.kakao.brandmessage.KakaoDeleteBrandMessageTemplate;
+import io.sendon.example.kakao.brandmessage.KakaoGetBrandMessageTemplate;
+import io.sendon.example.kakao.brandmessage.KakaoGetBrandMessageTemplates;
+import io.sendon.example.kakao.brandmessage.KakaoSendBrandMessage;
+import io.sendon.example.kakao.brandmessage.KakaoUpdateBrandMessageTemplate;
+import io.sendon.example.kakao.brandmessage.KakaoUploadBrandMessageImage;
+import io.sendon.example.kakao.brandmessage.KakaoUploadBrandMessageWideImage;
 import io.sendon.example.kakao.channel.KakaoGetSendProfiles;
 import io.sendon.example.kakao.channel.KakaoRegisterProfile;
 import io.sendon.example.kakao.channel.KakaoRequestVerification;
@@ -21,6 +33,10 @@ import io.sendon.example.payment.PaymentGetHistories;
 import io.sendon.example.point.PointGetCost;
 import io.sendon.example.point.PointGetPoint;
 import io.sendon.example.point.ZPointDivider;
+import io.sendon.example.rcs.RcsQueryMessageScenario;
+import io.sendon.example.rcs.RcsQueryPresignedUrlScenario;
+import io.sendon.example.rcs.RcsSendMessageNowScenario;
+import io.sendon.example.rcs.ZRcsDivider;
 import io.sendon.example.sender.SenderGetNumbers;
 import io.sendon.example.sender.ZSenderDivider;
 import io.sendon.example.sms.ZSmsDivider;
@@ -50,6 +66,18 @@ public class DemoApplication {
             new SmsCancelLongMessageScenario(),
             new SmsSendLongMessageWithUploadImageScenario(),
             new ZKakaoDivider(),
+            new KakaoCreateBrandMessageTemplate(),
+            new KakaoCreateBrandMessageImageTemplate(),
+            new KakaoCreateBrandMessageWideTemplate(),
+            new KakaoCreateBrandMessageWideItemListTemplate(),
+            new KakaoCreateBrandMessageCarouselTemplate(),
+            new KakaoGetBrandMessageTemplates(),
+            new KakaoGetBrandMessageTemplate(),
+            new KakaoUpdateBrandMessageTemplate(),
+            new KakaoDeleteBrandMessageTemplate(),
+            new KakaoSendBrandMessage(),
+            new KakaoUploadBrandMessageImage(),
+            new KakaoUploadBrandMessageWideImage(),
             new KakaoRequestVerification(),
             new KakaoRegisterProfile(),
             new KakaoGetSendProfiles(),
@@ -58,6 +86,10 @@ public class DemoApplication {
             new KakaoCreateTemplate(),
             new KakaoSendAlimTalk(),
             new KakaoUploadFallbackImage(),
+            new ZRcsDivider(),
+            new RcsSendMessageNowScenario(),
+            new RcsQueryMessageScenario(),
+            new RcsQueryPresignedUrlScenario(),
             new ZSenderDivider(),
             new SenderGetNumbers(),
             new ZPointDivider(),

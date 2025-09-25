@@ -8,8 +8,10 @@ export class UploadFallbackImage extends BaseScenario {
   description = '[카카오] 대체문자 이미지 업로드'
 
   async execute() {
-    const buffer = fs.readFileSync('./src/kakao/image/images/sample.jpg')
-    const file = new File([new Uint8Array(buffer)], 'sample.jpg', { type: 'image/jpeg' })
+    const buffer = fs.readFileSync('./src/kakao/assets/images/sample-image.jpeg')
+    const file = new File([new Uint8Array(buffer)], 'sample-image.jpeg', {
+      type: 'image/jpeg',
+    })
 
     const result1 = await this.sendon.kakao.uploadFallbackImage([file])
 

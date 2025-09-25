@@ -8,12 +8,21 @@ import io.sendon.example.BaseScenario;
 public class ContactsAddRemoveBlocklist extends BaseScenario {
 
   @Override
-  public void execute() throws InterruptedException {
-      AddBlocklist addBlocklist = sendon.contacts.addBlocklist("01012345678");
-      Log.d("AddBlocklist: " + gson.toJson(addBlocklist));
-
-      DeleteBlocklist deleteBlocklist = sendon.contacts.deleteBlocklist(addBlocklist.data.id);
-      Log.d("DeleteBlocklist: " + gson.toJson(deleteBlocklist));
+  public void execute() throws InterruptedException {    
+    AddBlocklist senderBlocklist = sendon.contacts.addBlocklist(
+        "01098765432", 
+        "SMS", 
+        SMS_MOBILE_FROM,
+        null, 
+        null, 
+        null
+    );
+    Log.d("발신번호별 차단 추가: " + gson.toJson(senderBlocklist));
+    
+    if (senderBlocklist != null && senderBlocklist.data != null) {
+      DeleteBlocklist deleteResult2 = sendon.contacts.deleteBlocklist(senderBlocklist.data.id);
+      Log.d("발신번호별 차단 삭제: " + gson.toJson(deleteResult2));
+    }
   }
 
   @Override

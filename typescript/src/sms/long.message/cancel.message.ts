@@ -1,8 +1,8 @@
 /* eslint-disable no-console */
-import { SdoError, SdoSmsCancelResponse, SdoSmsSendMessageResponse, SmsMessageType } from '@alipeople/sendon-sdk-typescript'
+import { SdoSmsCancelResponse, SdoSmsSendMessageResponse, SmsMessageType } from '@alipeople/sendon-sdk-typescript'
 
-import { BaseScenario, SMS_MOBILE_FROM, SMS_MOBILE_TO } from '../../base.scenario'
 import { HttpStatusCode } from 'axios'
+import { BaseScenario, SMS_MOBILE_FROM, SMS_MOBILE_TO } from '../../base.scenario'
 
 export class CancelLongMessage extends BaseScenario {
   description = '[LMS] 예약문자 취소'

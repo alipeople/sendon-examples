@@ -47,25 +47,38 @@
 10. [카카오] 채널 인증번호 요청 (RequestChannelVerification)
 11. [카카오] 채널 등록 (RegisterChannel)
 12. [카카오] 발신프로필 리스트 조회 (GetSendProfiles)
-13. [카카오] 템플릿 목록 조회 (GetTemplateList)
-14. [카카오] 템플릿 조회 (GetTemplate)
-15. [카카오] 템플릿 생성 (CreateTemplate)
-16. [카카오] 알림톡 발송 (SendAlimTalk)
-17. [카카오] 대체문자 이미지 업로드 (UploadFallbackImage)
+13. [카카오] 알림톡 발송 (SendAlimTalk)
+14. [카카오] 알림톡 템플릿 목록 조회 (GetTemplateList)
+15. [카카오] 알림톡 템플릿 조회 (GetTemplate)
+16. [카카오] 알림톡 템플릿 생성 (CreateTemplate)
+17. [카카오] 브랜드메시지 발송 (SendBrandMessage)
+18. [카카오] 브랜드메시지 템플릿 생성/발송 (CreateBrandMessageTemplate)
+19. [카카오] 브랜드메시지 이미지 업로드/템플릿 생성/발송 (CreateImageBrandMessageTemplate)
+20. [카카오] 브랜드메시지 와이드 템플릿 생성/발송 (CreateWideBrandMessageTemplate)
+21. [카카오] 브랜드메시지 템플릿 목록 조회 (GetBrandMessageTemplateList)
+22. [카카오] 브랜드메시지 템플릿 상세 조회 (GetBrandMessageTemplate)
+23. [카카오] 브랜드메시지 템플릿 수정 (UpdateBrandMessageTemplate)
+24. [카카오] 브랜드메시지 템플릿 삭제 (DeleteBrandMessageTemplate)
+25. [카카오] 대체문자 이미지 업로드 (UploadFallbackImage)
+
+=========== RCS ===========
+26. [RCS] 즉시 RCS 메시지 발송 (SendRcsMessageNow)
+27. [RCS] 발송한 RCS 메시지 조회 (QueryRcsMessage)
+28. [RCS] CSV 업로드용 Presigned URL 조회 (QueryPresignedUrl)
 
 =========== Sender ===========
-18. [발신번호] 발신번호 목록조회 (GetNumbers)
+29. [발신번호] 발신번호 목록조회 (GetNumbers)
 
 =========== Point ===========
-19. [포인트] 단가 조회 (GetCost)
-20. [포인트] 포인트 조회 (GetPoint)
+30. [포인트] 단가 조회 (GetCost)
+31. [포인트] 포인트 조회 (GetPoint)
 
 =========== Contacts ===========
-21. [주소록] 수신거부 추가삭제 (AddRemoveBlocklist)
-22. [주소록] 차단목록 조회 (GetBlocklist)
+32. [주소록] 수신거부 추가삭제 (AddRemoveBlocklist)
+33. [주소록] 차단목록 조회 (GetBlocklist)
 
 =========== Payment ===========
-23. [결제] 결제 내역 조회 (GetHistory)
+34. [결제] 결제 내역 조회 (GetHistory)
 0. Exit
 Select a command:
 ```

@@ -10,7 +10,7 @@
 		"demo": "tsx src/demo.application.ts"
 	},
 	"dependencies": {
-		"@alipeople/sendon-sdk-typescript": "^1.0.3",
+		"@alipeople/sendon-sdk-typescript": "^1.0.4",
 		"@types/axios": "^0.14.4",
 		"axios": "^1.7.7",
 		"dotenv": "^16.4.7",

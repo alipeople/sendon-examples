@@ -1,8 +1,7 @@
 /* eslint-disable no-console */
-import { SdoError } from '@alipeople/sendon-sdk-typescript'
 
-import { BaseScenario, KKO_CHANNEL_ID, KKO_CHANNEL_PHONE_NUMBER, KKO_TOKEN_YOU_RECEIVED } from '../../base.scenario'
 import { HttpStatusCode } from 'axios'
+import { BaseScenario, KKO_CHANNEL_ID, KKO_CHANNEL_PHONE_NUMBER } from '../../base.scenario'
 
 export class RegisterChannel extends BaseScenario {
   description = '[카카오] 채널 등록'
@@ -11,7 +10,7 @@ export class RegisterChannel extends BaseScenario {
     const result1 = await this.sendon.kakao.registerChannel({
       channelId: KKO_CHANNEL_ID,
       phoneNumber: KKO_CHANNEL_PHONE_NUMBER,
-      token: KKO_TOKEN_YOU_RECEIVED,
+      token: '123456', // 카카오톡으로 받은 인증번호
     })
 
     if (result1.code === HttpStatusCode.Ok) {

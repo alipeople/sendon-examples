@@ -1,9 +1,9 @@
 /* eslint-disable no-console */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { ListUserNumbersResponseDto, SdoError } from '@alipeople/sendon-sdk-typescript'
+import { ListUserNumbersResponseDto } from '@alipeople/sendon-sdk-typescript'
 
-import { BaseScenario } from '../base.scenario'
 import { HttpStatusCode } from 'axios'
+import { BaseScenario } from '../base.scenario'
 
 export class GetNumbers extends BaseScenario {
   description = '[발신번호] 발신번호 목록조회'

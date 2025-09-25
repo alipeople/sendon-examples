@@ -1,8 +1,8 @@
 /* eslint-disable no-console */
-import { SdoError, SdoSmsGetMessageResponse, SdoSmsSendMessageResponse, SmsMessageType } from '@alipeople/sendon-sdk-typescript'
+import { SdoSmsGetMessageResponse, SdoSmsSendMessageResponse, SmsMessageType } from '@alipeople/sendon-sdk-typescript'
 
-import { BaseScenario, SMS_MOBILE_FROM, SMS_MOBILE_TO } from '../../base.scenario'
 import { HttpStatusCode } from 'axios'
+import { BaseScenario, SMS_MOBILE_FROM, SMS_MOBILE_TO } from '../../base.scenario'
 
 export class QueryLongMessage extends BaseScenario {
   description = '[LMS] 발송문자 조회'
