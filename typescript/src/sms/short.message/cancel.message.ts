@@ -1,11 +1,19 @@
 /* eslint-disable no-console */
-import { SdoSmsCancelResponse, SdoSmsSendMessageResponse, SmsMessageType } from '@alipeople/sendon-sdk-typescript';
+import {
+  SdoSmsCancelResponse,
+  SdoSmsSendMessageResponse,
+  SmsMessageType,
+} from "@alipeople/sendon-sdk-typescript";
 
-import { HttpStatusCode } from 'axios';
-import { BaseScenario, SMS_MOBILE_FROM, SMS_MOBILE_TO } from '../../base.scenario';
+import { HttpStatusCode } from "axios";
+import {
+  BaseScenario,
+  SMS_MOBILE_FROM,
+  SMS_MOBILE_TO,
+} from "../../base.scenario";
 
 export class CancelShortMessage extends BaseScenario {
-  description = '[SMS] 예약문자 취소'
+  description = "[SMS] 예약문자 취소";
 
   async execute() {
     const result1: SdoSmsSendMessageResponse = await this.sendon.sms.send({
@@ -16,21 +24,23 @@ export class CancelShortMessage extends BaseScenario {
       reservation: {
         datetime: new Date(Date.now() + 3 * 60 * 60 * 1000).toISOString(),
       },
-    })
+    });
 
-    if (result1.code === HttpStatusCode.Ok) {
-      console.log(`성공 응답: ${JSON.stringify(result1, null, 2)}`)
+    if (result1.code === HttpStatusCode.Ok && result1.data.groupId) {
+      console.log(`성공 응답: ${JSON.stringify(result1, null, 2)}`);
 
-      await this.sleep(5 * 1000)
-      const result2: SdoSmsCancelResponse = await this.sendon.sms.cancel(result1.data.groupId)
+      await this.sleep(5 * 1000);
+      const result2: SdoSmsCancelResponse = await this.sendon.sms.cancel(
+        result1.data.groupId,
+      );
 
       if (result2.code === HttpStatusCode.Ok) {
-        console.log(`성공 응답: ${JSON.stringify(result2, null, 2)}`)
+        console.log(`성공 응답: ${JSON.stringify(result2, null, 2)}`);
       } else {
-        console.log(`실패 응답: ${JSON.stringify(result2, null, 2)}`)
+        console.log(`실패 응답: ${JSON.stringify(result2, null, 2)}`);
       }
     } else {
-      console.log(`실패 응답: ${JSON.stringify(result1, null, 2)}`)
+      console.log(`실패 응답: ${JSON.stringify(result1, null, 2)}`);
     }
   }
 }

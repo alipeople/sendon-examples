@@ -16,6 +16,7 @@ public class SmsSendShortMessageNowScenario extends BaseScenario {
         .setTo(Arrays.asList(SMS_MOBILE_TO))
         .setMessage("Hello, World!")
         .setIsAd(false)
+        .setUseCredit(true)
     );
     Log.d("응답: " + gson.toJson(sendSms));
   }

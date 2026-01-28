@@ -1,12 +1,12 @@
 /* eslint-disable no-console */
-import { SdoKakaoSendAlimTalkResponse } from '@alipeople/sendon-sdk-typescript';
+import { SdoKakaoSendAlimTalkResponse } from "@alipeople/sendon-sdk-typescript";
 
 import { HttpStatusCode } from "axios";
 import {
-    BaseScenario,
-    KKO_MOBILE_TO,
-    KKO_SEND_PROFILE_ID,
-    KKO_TEMPLATE_ID,
+  BaseScenario,
+  KKO_MOBILE_TO,
+  KKO_SEND_PROFILE_ID,
+  KKO_TEMPLATE_ID,
 } from "../../base.scenario";
 
 export class SendAlimTalk extends BaseScenario {
@@ -17,7 +17,8 @@ export class SendAlimTalk extends BaseScenario {
       await this.sendon.kakao.sendAlimTalk({
         sendProfileId: KKO_SEND_PROFILE_ID,
         templateId: KKO_TEMPLATE_ID,
-        to: [ KKO_MOBILE_TO.to ],
+        to: [KKO_MOBILE_TO.to],
+        useCredit: true,
       });
 
     if (result1.code === HttpStatusCode.Ok) {

@@ -15,6 +15,7 @@ public class KakaoSendAlimTalk extends BaseScenario {
           .setProfileId(KKO_SEND_PROFILE_ID)
           .setTemplateId(KKO_TEMPLATE_ID)
           .setTo(Arrays.asList(KKO_MOBILE_TO))
+          .setUseCredit(true)
       );
       Log.d("SendAlimtalk: " + gson.toJson(sendAlimtalkResult));
     }
