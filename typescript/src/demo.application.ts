@@ -3,6 +3,7 @@ import * as readline from "readline";
 
 import { BaseScenario } from "./base.scenario";
 import { AddRemoveBlocklist } from "./contacts/add.remove.blocklist";
+import { AddRemoveUnifiedBlocklist } from "./contacts/add.remove.unified.blocklist";
 import { ContactsDivider } from "./contacts/contacts.divider";
 import { GetBlocklist } from "./contacts/get.blocklist";
 import { RegisterChannel } from "./kakao/channel/register-channel";
@@ -96,6 +97,7 @@ const scenarios: BaseScenario[] = [
   new ContactsDivider(),
   new AddRemoveBlocklist(),
   new GetBlocklist(),
+  new AddRemoveUnifiedBlocklist(),
 
   new PaymentDivider(),
   new GetHistory(),

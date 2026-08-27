@@ -2,9 +2,9 @@
 import * as fs from 'fs'
 
 import {
-    CreateImageBrandMessageTemplateRequest,
+    SdoKakaoBrandMessageCreateImageTemplateRequest,
     SdoError,
-    UploadBrandMessageImage200Response,
+    UploadBrandMessageImageResponseDto,
 } from '@alipeople/sendon-sdk-typescript'
 import { HttpStatusCode } from 'axios'
 
@@ -25,7 +25,7 @@ export class CreateImageBrandMessageTemplate extends BaseScenario {
         type: 'image/jpeg',
       })
 
-      const uploadResponse: UploadBrandMessageImage200Response =
+      const uploadResponse: UploadBrandMessageImageResponseDto =
         await this.sendon.kakao.uploadBrandMessageImage(imageFile)
 
       if (uploadResponse.code !== HttpStatusCode.Ok) {
@@ -36,7 +36,7 @@ export class CreateImageBrandMessageTemplate extends BaseScenario {
       const imageUrl = uploadResponse.data.image
       console.log(`업로드된 브랜드메시지 이미지 URL: ${imageUrl}`)
 
-      const templateRequest: CreateImageBrandMessageTemplateRequest = {
+      const templateRequest: SdoKakaoBrandMessageCreateImageTemplateRequest = {
         templateName: `brand-message-${Date.now()}`,
         content: '이미지 템플릿 본문입니다. #{고객명}님 확인해주세요.',
         imageUrl,

@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import io.sendon.example.contacts.ContactsAddRemoveBlocklist;
+import io.sendon.example.contacts.ContactsAddRemoveUnifiedBlocklist;
 import io.sendon.example.contacts.ContactsGetBlocklist;
 import io.sendon.example.contacts.ZContactsDivider;
 import io.sendon.example.kakao.ZKakaoDivider;
@@ -98,6 +99,7 @@ public class DemoApplication {
             new ZContactsDivider(),
             new ContactsGetBlocklist(),
             new ContactsAddRemoveBlocklist(),
+            new ContactsAddRemoveUnifiedBlocklist(),
             new PaymentDivider(),
             new PaymentGetHistories()
         };
