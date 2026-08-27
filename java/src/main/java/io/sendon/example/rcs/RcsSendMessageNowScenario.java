@@ -30,6 +30,11 @@ public class RcsSendMessageNowScenario extends BaseScenario {
             .setAgencyKey(RCS_AGENCY_KEY)
             .setClientId(RCS_CLIENT_ID)
             .setClientSecret(RCS_CLIENT_SECRET)
+            // 광고성 발송 여부. true 면 발송 전 수신거부 목록과 대조해 등록된 번호를 제외한다.
+            // 이 예제는 header 0(정보성)이라 false 다. 광고로 보낼 때는 true 로 지정한다.
+            // 통합 템플릿(RCS 통합템플릿)은 메시지에 광고/정보성 구분값이 담기지 않아 발송 시점에
+            // 판별할 수 없으므로 항상 true 로 보낸다. 미지정 시에는 서버가 안전하게 대조한다.
+            .setIsAd(false)
             .setBody(new RbcBody())
         )
         .setFallback(new Fallback()

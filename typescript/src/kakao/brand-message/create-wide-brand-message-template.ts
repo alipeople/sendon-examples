@@ -2,9 +2,9 @@
 import * as fs from 'fs'
 
 import {
-    CreateWideBrandMessageTemplateRequest,
+    SdoKakaoBrandMessageCreateWideTemplateRequest,
     SdoError,
-    UploadBrandMessageImage200Response,
+    UploadBrandMessageWideImageResponseDto,
 } from '@alipeople/sendon-sdk-typescript'
 import { HttpStatusCode } from 'axios'
 
@@ -29,7 +29,7 @@ export class CreateWideBrandMessageTemplate extends BaseScenario {
         },
       )
 
-      const uploadResponse: UploadBrandMessageImage200Response =
+      const uploadResponse: UploadBrandMessageWideImageResponseDto =
         await this.sendon.kakao.uploadBrandMessageWideImage(wideImageFile)
 
       if (uploadResponse.code !== HttpStatusCode.Ok) {
@@ -42,7 +42,7 @@ export class CreateWideBrandMessageTemplate extends BaseScenario {
       const wideImageUrl = uploadResponse.data.image
       console.log(`업로드된 와이드 이미지 URL: ${wideImageUrl}`)
 
-      const request: CreateWideBrandMessageTemplateRequest = {
+      const request: SdoKakaoBrandMessageCreateWideTemplateRequest = {
         templateName: `brand-message-${Date.now()}`,
         content: '와이드 템플릿 본문입니다. #{고객명}님 확인해주세요.',
         imageUrl: wideImageUrl,

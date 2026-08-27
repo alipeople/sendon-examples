@@ -79,9 +79,10 @@
 =========== Contacts ===========
 36. [주소록] 차단목록 조회 (ContactsGetBlocklist)
 37. [주소록] 수신거부 추가삭제 (ContactsAddRemoveBlocklist)
+38. [주소록] 통합 수신거부 추가조회삭제 (ContactsAddRemoveUnifiedBlocklist)
 
 =========== Payment ===========
-38. [결제] 결제 내역 조회 (PaymentGetHistories)
+39. [결제] 결제 내역 조회 (PaymentGetHistories)
 0. Exit
 Select a command:
 ```

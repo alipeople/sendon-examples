@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@alipeople/sendon-sdk-typescript@^1.0.5":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@alipeople/sendon-sdk-typescript/-/sendon-sdk-typescript-1.0.5.tgz#097244a5da0840c725d7769978e05d2c92e788c9"
-  integrity sha512-+VfqkHE/qFFgA/ogBUGPfSSrTsrJ9rlERixp/N8CdWbuQMsWiFPZ+I5u54d0daFu3PPcUf9WwyzBRNkct3VvVg==
+"@alipeople/sendon-sdk-typescript@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@alipeople/sendon-sdk-typescript/-/sendon-sdk-typescript-1.0.6.tgz#6d2d550a75d798d747d3ed393a8868047fb22ff2"
+  integrity sha512-mNde/vMUxoRnCNCW6Eq5fR/Tqcom1BylVejFLKL6kzGDah5/ZiTFaTq1XJgeXWc6emnT5Cz8E8od3Kit1ysZNQ==
   dependencies:
     axios "^1.6.1"
 

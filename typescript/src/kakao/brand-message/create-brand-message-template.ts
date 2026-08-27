@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import {
-    CreateTextBrandMessageTemplateRequest,
+    SdoKakaoBrandMessageCreateTextTemplateRequest,
     SdoError,
 } from '@alipeople/sendon-sdk-typescript'
 import { HttpStatusCode } from 'axios'
@@ -15,7 +15,7 @@ export class CreateBrandMessageTemplate extends BaseScenario {
   description = '[카카오] 브랜드메시지 템플릿 생성/발송'
 
   async execute() {
-    const request: CreateTextBrandMessageTemplateRequest = {
+    const request: SdoKakaoBrandMessageCreateTextTemplateRequest = {
       templateName: `brand-message-${Date.now()}`,
       content: '안녕하세요 #{고객명}님, 브랜드 메시지 테스트입니다.',
       buttons: [
